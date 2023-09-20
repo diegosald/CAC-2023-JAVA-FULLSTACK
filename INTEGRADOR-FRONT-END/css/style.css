@@ -1,0 +1,20 @@
+.mv-caption{
+    right:0;
+    bottom: 14%;
+}
+
+.brillo{
+    filter: brightness(50%);
+}
+
+.colorfooter{
+    background-image: linear-gradient(to right, #1c3643, #1e5372);
+}
+
+.card:hover{
+    box-shadow: 0 0 20px 0;
+}
+.badge:hover{
+    box-shadow: 0 0 10px 0 gray;
+
+}
