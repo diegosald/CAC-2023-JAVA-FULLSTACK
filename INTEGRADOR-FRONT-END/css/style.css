@@ -3,8 +3,9 @@
     bottom: 14%;
 }
 
-.brillo{
+.brillo-tam{
     filter: brightness(50%);
+    height: 600px;
 }
 
 .colorfooter{
@@ -18,3 +19,4 @@
     box-shadow: 0 0 10px 0 gray;
 
 }
+
