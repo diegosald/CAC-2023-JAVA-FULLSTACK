@@ -17,3 +17,26 @@ svg{
     background-image: linear-gradient(to right, #18153f, #36779c);
 }
 
+.zoomdown2{
+    display:inline-block;
+    animation: zoomInDown ;
+    animation-duration: 2s;
+}
+
+.zoomdown3{
+    display:inline-block;
+    animation: zoomInDown ;
+    animation-duration: 3s;
+}
+
+.zoomdown4{
+    display:inline-block;
+    animation: zoomInDown ;
+    animation-duration: 4s;
+}
+
+.flipflip2{
+    display:inline-block;
+    animation:  flipInY ;
+    animation-duration: 2s;
+}
