@@ -16,8 +16,8 @@
     <!-- header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html"><img src="img/codoacodo.png" style="width:110px;"
-                    alt="cac" /><span>Conf Bs
+            <a class="navbar-brand d-flex align-items-center" href="index.html"><img src="img/codoacodo.png"
+                    style="width:110px;" alt="cac" /><span>Conf Bs
                     As</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5">
                 <span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span>
             </button>
@@ -53,9 +53,9 @@
     </div>
     <!-- cards -->
     <div class="d-flex flex-wrap justify-content-center m-2 gap-3">
-      
+
         <div class="card" style="width: 18rem;" onclick="selticket('Estudiante')">
-            <div class="card-body" >
+            <div class="card-body">
                 <div class="">
                     <!-- <a href="#"></a> -->
                     <span class="badge bg-danger text-white">80% off</span>
@@ -67,9 +67,9 @@
                     quam dolore nihil reiciendis.</p>
             </div>
         </div>
-      
+
         <div class="card" style="width: 18rem;">
-    
+
             <div class="card-body" onclick="selticket('Trainee')">
                 <div class="">
                     <a href="#"><span class="badge bg-warning text-dark">50% off</span></a>
@@ -82,7 +82,7 @@
             </div>
         </div>
         <div class="card" style="width: 18rem;">
-    
+
             <div class="card-body" onclick="selticket('Junior')">
                 <div class="">
                     <a href="#"><span class="badge bg-secondary text-white">15% off</span></a>
@@ -94,7 +94,20 @@
                     quam dolore nihil reiciendis.</p>
             </div>
         </div>
-    
+        <div class="card" style="width: 18rem;">
+
+            <div class="card-body" onclick="selticket('General')">
+                <div class="">
+                    <a href="#"><span class="badge bg-secondary text-white">0% off</span></a>
+                    <!-- <a href="#"><span class="badge bg-danger text-white ">Startups</span></a> -->
+                </div>
+                <p class="fs-5 fw-bold">General</p>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum velit neque eligendi
+                    ratione architecto aspernatur, iure commodi, nam enim, quae veniam facilis sit repellat odit minus
+                    quam dolore nihil reiciendis.</p>
+            </div>
+        </div>
+
     </div>
 
     <!-- carrousel 2 sin botones -->
@@ -102,48 +115,75 @@
 
     <!-- titulo formulario -->
     <div class="text-center mb-2">
-        <div class="">COMPLETA TUS</div>
-        <div class="fs-4 fw-bold">DATOS</div>
+        <div class="">ENTRADA GENERAL</div>
+        <div class="fs-4 fw-bold">$ 1000</div>
 
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Hay errores en el Formulario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modal-body" class="modal-body text-center pb-0 mb-0 fw-bold text-danger">
+                  ...  
+                </div>
+                <div class="modal-footer justify-content-center ">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
     <!-- formulario  -->
-    <div id="ser-orador" class="container mb-3">
+    <div id="comprar-entradas" class="container mb-3">
 
         <div class="row">
             <div class="col-lg-2">
             </div>
             <div class="col-lg-8">
-                <form>
-                    <div class="mb-3 d-flex gap-3 justify-content-spacebetween">
+                <form method="get" >
+                    <div class="mb-3 d-flex flex-md-row flex-column gap-3 justify-content-spacebetween">
 
-                        <input type="text" class="form-control no-vacio" id="nombre-txt" placeholder="Nombre">
-                        <input type="text" class="form-control no-vacio" id="apellido-txt" placeholder="Apellido">
+                        <input type="text" class="form-control no-vacio " name="nombre-txt" id="nombre-txt" placeholder="Nombre">
+                        <input type="text" class="form-control no-vacio " name="apellido-txt" id="apellido-txt" placeholder="Apellido">
+                    
                     </div>
                     <div class="mb-3 d-flex gap-3 ">
 
-                        <input type="text" class="form-control no-vacio" id="correo-txt" placeholder="Correo">
-                        
+                        <input type="text" class="form-control no-vacio" name="correo-txt" id="correo-txt" placeholder="Correo">
+
                     </div>
 
-                    <div class="mb-3 d-flex gap-3 justify-content-spacebetween">
+                    <div class="mb-3 d-flex flex-md-row flex-column gap-3 justify-content-spacebetween">
 
-                        <input oninput="" type="text" class="form-control no-vacio " id="cantidad-txt"
+                        <input oninput="" type="text" class="form-control no-vacio " name="cantidad-txt" id="cantidad-txt"
                             placeholder="Cantidad">
                         <select name="tipo-entrada" id="tipoent" class="form-select">
                             <option value="Estudiante">Estudiante</option>
                             <option value="Trainee">Trainee</option>
                             <option value="Junior">Junior</option>
-
+                            <option value="General">General</option>
                         </select>
                     </div>
-                    <div class="mb-3 d-flex justify-content-center">
-                        <P>Precio Total: $ </P> <span id="total">0</span>
+                    <div class="mb-0 d-flex justify-content-center">
+                        <p>Precio Total: $ </p> <span id="total">0</span> 
+                       
+                    </div>
+                    <div id="bt-comprar" class="mb-3 d-none justify-content-center">
+                         <button type="submit" class="btn btn-success w-100">Comprar</button>
                     </div>
 
-
                 </form>
-                <div class="mb-3 d-flex justify-content-center gap-3">
+                <div id="antes-compra" class="mb-3 d-flex justify-content-spacebetween gap-3">
                     <button onclick="limpiar()" class="btn btn-danger w-50">Limpiar</button>
                     <button onclick="calcPrecio()" class="btn btn-success w-50">Resumen</button>
 

@@ -271,6 +271,39 @@
 
     </div>
     
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Título del modal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <!-- formulario  -->
     <div id="ser-orador" class="container mb-3">
 
@@ -278,13 +311,13 @@
             <div class="col-lg-2">
             </div>
             <div class="col-lg-8">
-                <form>
+                <form method="get">
                     <p class="text-center mb-1">Anótate como orador para dar una <abbr title="">charla de ignite.</abbr>
                         Cuéntanos mas de qué quieres hablar!</p>
                     <div class="mb-3 d-flex gap-3 justify-content-spacebetween">
 
-                        <input type="text" class="form-control" id="nombre-txt" placeholder="Nombre">
-                        <input type="text" class="form-control" id="apellido-txt" placeholder="Apellido">
+                        <input type="text" class="form-control" name="nombre-txt" id="nombre-txt" placeholder="Nombre">
+                        <input type="text" class="form-control" name="apellido-txt" id="apellido-txt" placeholder="Apellido">
                     </div>
                     <div class="mb-3">
                         <textarea name="textarea" rows="5"

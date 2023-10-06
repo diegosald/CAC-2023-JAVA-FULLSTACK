@@ -3,22 +3,28 @@ const cPrecios = {
     "Estudiante": {
 
 
-        precio: 200,
+        precio: 1000,
         descuento: 0.80
     },
     "Trainee": {
 
 
-        precio: 200,
+        precio: 1000,
         descuento: 0.5
     },
     "Junior": {
 
 
-        precio: 200,
+        precio: 1000,
         descuento: 0.15
     },
+    
+    "General": {
 
+
+        precio: 1000,
+        descuento: 0
+    },
 
 
 }
@@ -69,8 +75,8 @@ function veriCont() {
         }
 
     }
-      
-    
+
+
     if (cantidad == "") {
         errores.push("EL CAMPO CANTIDAD NO PUEDE ESTAR VACIO")
 
@@ -95,23 +101,30 @@ function calcPrecio() {
     const cantidad = document.getElementById("cantidad-txt")
     const total = document.getElementById("total")
     let descuento = (cPrecios[tipo].precio * cPrecios[tipo].descuento)
-   
+
     if (veriCont().length == 0) {
 
         total.innerHTML = (cantidad.value * (cPrecios[tipo].precio - descuento))
-
+        //document.getElementById("antes-compra").className = "d-none"
+        document.getElementById("bt-comprar").className = "mb-3 d-flex justify-content-center"
     }
 
     else {
         let cadena = ""
         for (let i = 0; i < veriCont().length; i++) {
 
-            cadena += (veriCont()[i] + "\n")
+
+            cadena += ("<p>" + veriCont()[i] + "<p>")
+            // cadena += (veriCont()[i] + "\n")
 
         }
-        alert(cadena)
+        //alert(cadena)
 
-
+        var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
+            keyboard: false
+        })
+        document.getElementById("modal-body").innerHTML = cadena
+        myModal.show()
     }
 
     // total.innerHTML = (cantidad.value * (cPrecios[tipo].precio - descuento))
@@ -122,6 +135,7 @@ function limpiar() {
 
     const noVacio = document.getElementsByClassName("no-vacio")
     document.getElementById("total").innerHTML = "0"
+    document.getElementById("bt-comprar").className = "d-none"
     for (let i = 0; i < noVacio.length; i++) {
 
         noVacio[i].value = ""
